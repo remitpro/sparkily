@@ -58,8 +58,8 @@ Sparkily integrates two datasets:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/toraaglobal/DataModelingPostgresAndCasandra.git
-   cd DataModelingPostgresAndCasandra/DataModelingwithPostgres
+   git clone https://github.com/remitpro/sparkily.git
+   cd sparkily
    ```
 
 2. **Load raw data into SQL Server**
