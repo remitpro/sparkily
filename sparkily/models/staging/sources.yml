@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: sparkily
+    database: Sparkily
+    schema: dev
+    tables:
+      - name: song_data
+      - name: log_data

@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: dim_songs
+    description: "Dimension table for songs with metadata from staging"
+    columns:
+      - name: song_id
+        description: "Unique identifier for each song"
+        tests:
+          - unique
+          - not_null
+      - name: artist_id
+        description: "ID of the artist who performed the song"
+      - name: title
+        description: "Song title"
+      - name: duration
+        description: "Duration of the song in seconds"
+      - name: year
+        description: "Year the song was released"
+  - name: dim_artists
+    description: "Dimension table for artists extracted from staging song data"
+    columns:
+      - name: artist_id
+        description: "Unique identifier for each artist"
+        tests:
+          - unique
+          - not_null
+      - name: artist_name
+        description: "Name of the artist"
+      - name: artist_location
+        description: "Location of the artist"
+      - name: artist_latitude
+        description: "Latitude coordinate of artist location"
+      - name: artist_longitude
+        description: "Longitude coordinate of artist location"
+  - name: dim_users
+    description: "Dimension table for users from log data"
+    columns:
+      - name: user_id
+        description: "Unique user identifier"
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "User's first name"
+      - name: last_name
+        description: "User's last name"
+      - name: gender
+        description: "User's gender"
+      - name: level
+        description: "User's subscription level"
+
+  - name: fact_songplays
+    description: "Fact table capturing each user song play"
+    columns:
+      - name: songplay_id
+        description: "Unique identifier for each songplay event"
+        tests:
+          - unique
+          - not_null
+      - name: start_time
+        description: "Timestamp of songplay event"
+      - name: user_id
+        description: "User ID who played the song"
+      - name: level
+        description: "Subscription level"
+      - name: song_id
+        description: "Song ID"
+      - name: artist_id
+        description: "Artist ID"
+      - name: session_id
+        description: "Session ID"
+      - name: location
+        description: "Location of the user"
+      - name: user_agent
+        description: "User agent string"

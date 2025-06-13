@@ -1,0 +1,5 @@
+analyses:
+  - name: songplays_user_insights
+    description: >
+      A report for the analytics team to see which users are listening to what songs,
+      along with artist and song details.

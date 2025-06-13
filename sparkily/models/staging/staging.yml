@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_log_data
+    description: "Raw log events from Sparkily's music streaming application"
+    columns:
+      - name: userId
+        description: "ID of the user who triggered the event"
+      - name: firstName
+        description: "User's first name"
+      - name: lastName
+        description: "User's last name"
+      - name: gender
+        description: "User's gender"
+      - name: level
+        description: "User subscription level (free or paid)"
+      - name: song
+        description: "Title of the song played"
+      - name: artist
+        description: "Name of the artist"
+      - name: sessionId
+        description: "Session ID for user activity"
+      - name: itemInSession
+        description: "Item index in the session"
+      - name: ts
+        description: "Timestamp of the event"
+      - name: userAgent
+        description: "User's browser or device info"
+      - name: status
+        description: "HTTP status of the event"
+      - name: page
+        description: "Page where the event occurred"
+      - name: location
+        description: "Geographic location of the user"
+      - name: length
+        description: "Length of the song played"
+  - name: stg_songs
+    description: "Staging model combining song and artist metadata from the seed 'song_data'"
+    columns:
+      - name: song_id
+        description: "Unique identifier for each song"
+      - name: artist_id
+        description: "ID of the artist who performed the song"
+      - name: artist_name
+        description: "Name of the artist"
+      - name: artist_location
+        description: "Location of the artist"
+      - name: artist_latitude
+        description: "Latitude of artist location"
+      - name: artist_longitude
+        description: "Longitude of artist location"
+      - name: title
+        description: "Song title"

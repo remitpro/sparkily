@@ -32,5 +32,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   sparkily:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    marts:
+      +materialized: table
+      +tags: ['datamarts', 'marts']
+      +schema: 'dw'
+    staging:
       +materialized: view
+      +tags: ['staging']
+      +schema: 'stg'
