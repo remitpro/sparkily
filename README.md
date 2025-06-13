@@ -1,6 +1,6 @@
 
 
-# Data Modeling and Analytics with SQL Server, dbt, and Vanna.AI
+# Data Modeling and Analytics with SQL Server, dbt, and Vanna
 
 ### Project Description
 
