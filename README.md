@@ -2,6 +2,7 @@
 
 # Data Modeling and Analytics with SQL Server, dbt, and Vanna
 
+
 ### Project Description
 
 This project builds a scalable analytics solution for **Sparkily**, a music streaming service that wants to analyze song metadata and user activity data. The core components include:
@@ -9,7 +10,9 @@ This project builds a scalable analytics solution for **Sparkily**, a music stre
 * **SQL Server** as the central data warehouse.
 * **dbt (data build tool)** to transform and model the raw data into analytics-ready tables.
 * **Vanna.AI** to provide a natural language interface for business users to interact with the data.
-
+***
+![](./assets/Animation.gif)
+***
 Sparkily collects JSON-formatted logs for both user activity and song metadata. These logs are transformed into structured tables that provide insights into user listening behavior.
 
 ---
@@ -97,7 +100,7 @@ After transformations, the following analytics-ready schema is created in SQL Se
 * `dim_artists`
 * `dim_time`
 
-![Schema](./documents/songplayschema.jpg)
+![Schema](./assets/songplayschema.jpg)
 
 ---
 
